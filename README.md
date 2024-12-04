@@ -1,10 +1,10 @@
 # 教學
 ## 步驟 1：**下載 docker-compose.yml 檔案**
 
-在終端機中執行以下指令以下載 docker-compose.yml 檔案，並修改 `DEFAULT_EMAIL`：：
+在終端機中執行以下指令以下載 docker-compose.yml 檔案，並修改 `DEFAULT_EMAIL`：
 
 ```sh
-curl -LO <https://raw.githubusercontent.com/YiLin-Zhuang/nginx-proxy/master/docker-compose.yml>
+curl -LO https://raw.githubusercontent.com/YiLin-Zhuang/nginx-proxy/master/docker-compose.yml
 
 ```
 
