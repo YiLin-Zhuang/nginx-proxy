@@ -1,7 +1,7 @@
 # 教學
 ## 步驟 1：**下載 docker-compose.yml 檔案**
 
-在終端機中執行以下指令以下載 docker-compose.yml 檔案：
+在終端機中執行以下指令以下載 docker-compose.yml 檔案，並修改 `DEFAULT_EMAIL`：：
 
 ```sh
 curl -LO <https://raw.githubusercontent.com/YiLin-Zhuang/nginx-proxy/master/docker-compose.yml>
@@ -41,12 +41,14 @@ website:
       # 將 "www.yourdomain.com,yourdomain.com" 替換為你的網域
       - VIRTUAL_HOST=www.yourdomain.com,yourdomain.com
       - LETSENCRYPT_HOST=www.yourdomain.com,yourdomain.com
+      # 如果需要指定端口，可以加入以下環境變數
+      #- VIRTUAL_PORT=8080
 
 # 加入 "nginx-proxy" 網路
 networks:
   default:
-    external:
-      name: nginx-proxy
+    external: true
+    name: nginx-proxy
 
 ```
 
